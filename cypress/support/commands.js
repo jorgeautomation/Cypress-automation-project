@@ -23,3 +23,42 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("login", (username, password) => {
+    //Perform login click
+    cy.contains("Login").click();
+
+    //the promise then is to check something, in this case that the
+    //  login button test is actually Login
+    //   without alias
+    //cy.get("#loginLink").then(($link) => {
+        //const linkText = $link.text();
+        //expect(linkText).is.equal('Login');
+    //}).click();
+
+    //with alias long way
+    // cy.get("#loginLink").then(($link) => {
+    //     return $link.text();
+    // }).as("linkText"); //with alias
+    // cy.contains("Login").click();
+
+    //with alias shorthand way, # is for ID
+    cy.get("#loginLink").invoke('text').as("linkText");
+
+    //cy.contains("Login").click();
+
+    //I can do this here below the click as the variable was already stored
+    //  in the alias
+    cy.get("@linkText").then(($x) => {
+        expect($x).is.eql("Login");
+    });
+
+    cy.url().should("include", "/Account/Login")
+
+    cy.get('#UserName').type(username);
+    cy.get('#Password').type(password);
+
+    cy.get(".btn").click({force:true});
+    
+
+})
