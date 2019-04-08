@@ -4,8 +4,8 @@
 describe("Testing of EA App", () => {
 
     before("Login to application",() => {
-        //Go to app 
-        cy.visit("http://eaapp.somee.com/");
+        //Go to app, URL is in cypress.json
+        cy.visit("/");
         //reading the file to get data from
         cy.fixture("eauser").as("user");
 
