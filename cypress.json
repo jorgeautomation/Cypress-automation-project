@@ -1,5 +1,8 @@
 {
-    "baseURL": "http://eaapp.somee.com",
+    "baseUrl": "http://eaapp.somee.com",
     "video":true,
-    "screenshotsFolder":"cypress/videos"
+    "screenshotsFolder":"cypress/videos",
+    "env":{
+        "username":"admin"
+    }
 }
