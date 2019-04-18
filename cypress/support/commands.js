@@ -58,7 +58,7 @@ Cypress.Commands.add("login", (username, password) => {
     //calling user that is in fixture that was passed a parameter in login function
     cy.get('#UserName').type(username);
     //calling user that is in cypress.json env
-    cy.get('#UserName').type(Cypress.env("username"));
+    //cy.get('#UserName').type(Cypress.env("username"));
 
     cy.get('#Password').type(password);
 
