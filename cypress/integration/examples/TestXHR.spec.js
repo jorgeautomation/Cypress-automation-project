@@ -2,7 +2,7 @@
 
 describe("Test LambdaTest website XHR", () =>{
 
-    before("Login to application",() => {
+    beforeEach("Login to application",() => {
         cy.visit("https://accounts.lambdatest.com/login");
     });
     
@@ -22,7 +22,7 @@ describe("Test LambdaTest website XHR", () =>{
             url: '/api/user/organization/automation-test-summary'
         }).as('apicheck');
 
-
+        //reading user and password from lambda.json
         cy.fixture("lambda").as("lambdauser");
 
         cy.get("@lambdauser").then((lambdauser) => {
@@ -48,6 +48,19 @@ describe("Test LambdaTest website XHR", () =>{
         //implicit 
         cy.get("@apicheck").its('response.body').should('have.property','maxQueue').and('eql',10);
   
-    
+    })
+
+    it("Verify Lambda test cookies", () =>{ 
+        //reading user and password from lambda.json
+        cy.fixture("lambda").as("lambdauser");
+
+        cy.get("@lambdauser").then((lambdauser) => {
+            cy.get("[name='email']").debug().type(lambdauser.UserName);
+            cy.get("[name='password']").debug().type(lambdauser.Password,{log:false});
+        })
+
+        cy.get("[class='btn btn-primary btn-lg btn-block mt-3']").click();
+
+        cy.getCookie('user_id').should('have.property','value','60368');
     })
 })
