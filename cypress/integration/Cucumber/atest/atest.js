@@ -5,7 +5,7 @@ Given('I visit EA Site',() => {
 });
 
 Given('I click login link',() => {
-    cy.contains("Login").click();
+    cy.contains("Login").click();  
 });
 
 Given('I login as user with {string} and {string}',(userName, password) => {

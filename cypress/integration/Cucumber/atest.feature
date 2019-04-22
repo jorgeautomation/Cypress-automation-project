@@ -1,7 +1,7 @@
 #the intellisense is comming because of this plugin
 #alexkrechik.cucumberautocomplete
 
-Feature: Test EA feature
+Feature: Test EA feature  
 
   Test EA feature
 
