@@ -1,8 +1,8 @@
 {
-    "baseUrl": "http://eaapp.somee.com",
-    "video":true,
-    "screenshotsFolder":"cypress/videos",
-    "env":{
-        "username":"admin"
-    }
+  "baseUrl": "http://eaapp.somee.com",
+  "video": false,
+  "env": {
+    "username": "admin"
+  },
+  "projectId": "n1cpdy"
 }
