@@ -3,7 +3,10 @@
 export class LoginPage{
 
     performLogin(userName, password){
-        cy.get('#UserName').type(userName);
+        //cy.get('#UserName').type(userName);
+        //you can use xpath as cypress-xpath module was added
+        cy.xpath('//input[@id="UserName"]').type(userName);
+        //we will leave password with ID
         cy.get('#Password').type(password,{log:false});
     }
 

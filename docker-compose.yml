@@ -7,6 +7,6 @@ services:
       dockerfile: Dockerfile
     container_name: cypress
     command: npx cypress run
-    #volumes: 
-    #  - C:/Users/jorge/Desktop/reports/:C:/Users/jorge/Desktop/reports/
+    volumes: 
+      - C:/Users/jorge/Desktop/reports/:C:/Users/jorge/Desktop/reports/
       #This is host path local : container path
