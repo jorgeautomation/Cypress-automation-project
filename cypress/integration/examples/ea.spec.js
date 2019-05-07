@@ -3,6 +3,7 @@
 //   functions, types, and fields as you code.
 
 /// <reference types="Cypress" />
+import '@percy/cypress';
 
 describe("Testing of EA Site", () => {
 
@@ -15,10 +16,15 @@ describe("Testing of EA Site", () => {
         //IMPLICIT ASSERTION, [] is used to get an specific attribute with value
         //cy.get("[aria-label='jump to slide 2']",{timeout:15000}).should('have.class','ls-nav-active');
 
+        //User of Percy
+        //cy.percySnapshot();
+
         //EXPLICIT ASSERTION, calling a callback
         cy.get("[aria-label='jump to slide 2']",{timeout:15000}).should(($x) => {
             expect($x).to.have.class("ls-nav-active")
         })
+
+        //cy.percySnapshot();
 
     })
 
@@ -27,10 +33,14 @@ describe("Testing of EA Site", () => {
         //IMPLICIT ASSERTION, [] is used to get an specific attribute with value
         //cy.get("[aria-label='jump to slide 2']",{timeout:15000}).should('have.class','ls-nav-active');
 
+        cy.percySnapshot();
+
         //EXPLICIT ASSERTION, calling a callback
         cy.get("[aria-label='jump to slide 2']",{timeout:15000}).should(($x) => {
             expect($x).to.have.class("ls-nav-active")
         })
+
+        //cy.percySnapshot();
 
     })
 

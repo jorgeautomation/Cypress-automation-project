@@ -10,7 +10,10 @@ context("Actions", () =>{
 
 
 it("File upload demo", () => {
+    //cy.percySnapshot();
+
     cy.fixture('repository.png','base64').then(fileContent => {
+        
         //Taken from the selector playground of Cyppress
         cy.get("#fine-uploader-gallery > .qq-uploader-selector > .qq-upload-button-selector > input")
             .upload({
@@ -23,6 +26,7 @@ it("File upload demo", () => {
             });
 
     });
+    //cy.percySnapshot(); 
 });
 
 });

@@ -30,6 +30,8 @@ describe("Testing of EA App", () => {
         // . for for class, this is included now in the custom command cy.login
         //cy.get(".btn").click({force:true});
 
+        //cy.percySnapshot();
+
         //Click the employee list
         cy.contains("Employee List").click();
 
@@ -50,6 +52,8 @@ describe("Testing of EA App", () => {
         //  this is not part of this web test, this is to make a point regarding
         //  how to validate json files
         cy.wrap({name:'Karthik'}).should('have.property','name').and('eq','Karthik')
+
+        //cy.percySnapshot("after");
 
         //using wrap
         // cy.get('.table').find('tr > td').then(($td) => {

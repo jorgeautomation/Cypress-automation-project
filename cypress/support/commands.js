@@ -25,6 +25,7 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 import 'cypress-file-upload';
+import '@percy/cypress';
 
 Cypress.Commands.add("login", (username, password) => {
     //Perform login click
