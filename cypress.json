@@ -1,5 +1,4 @@
 {
-  "baseUrl": "http://eaapp.somee.com",
   "env": {
     "username": "admin"
   },

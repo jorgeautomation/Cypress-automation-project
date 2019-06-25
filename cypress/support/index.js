@@ -19,3 +19,8 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+  //handle the exception
+  Cypress.on('uncaught:exception', (err, runnable) => {
+    return false
+  })

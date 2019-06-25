@@ -13,10 +13,12 @@
 
 const cucumber = require('cypress-cucumber-preprocessor').default
 module.exports = (on, config) => {
+
+  //cucumber
   on('file:preprocessor', cucumber())
 
   //this one is for maximize windows
-  on('before:browser:launch', (browser = {}, args) => {
+  /*on('before:browser:launch', (browser = {}, args) => {
     if(browser.name==='chrome'){
       args.push('--start-fullscreen')
       //args.push('--incognito')
@@ -26,7 +28,8 @@ module.exports = (on, config) => {
       args['fullscreen'] = true
       return args
     }
-  })
+  })*/
+
 }
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
