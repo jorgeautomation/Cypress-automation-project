@@ -12,7 +12,7 @@
 // You can read more here:
 // https://on.cypress.io/configuration
 // ***********************************************************
-require('cypress-dark')
+//require('cypress-dark') //not supported in Cypress 3.3.1
 require('cypress-xpath')
 // Import commands.js using ES2015 syntax:
 import './commands'

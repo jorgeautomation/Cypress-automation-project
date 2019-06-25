@@ -59,9 +59,12 @@ Cypress.Commands.add("login", (username, password) => {
     cy.url().should("include", "/Account/Login")
 
     //calling user that is in fixture that was passed a parameter in login function
-    cy.get('#UserName').type(username);
+    //cy.get('#UserName').type(username);
+
+    //verifying have.focus new on version 3.3.1
+    cy.get('#UserName').should("have.focus");
     //calling user that is in cypress.json env
-    //cy.get('#UserName').type(Cypress.env("username"));
+    cy.get('#UserName').type(Cypress.env("username"));
 
     cy.get('#Password').type(password);
 

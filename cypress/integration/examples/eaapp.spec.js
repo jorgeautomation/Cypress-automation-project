@@ -5,7 +5,8 @@ describe("Testing of EA App", () => {
 
     before("Login to application",() => {
         //Go to app, URL is in cypress.json
-        cy.visit("/");
+        //retryOnStatusCodeFailure was added on 3.3.1 to retry when page is not found
+        cy.visit("/",{retryOnStatusCodeFailure:true});
         //reading the file to get data from
         cy.fixture("eauser").as("user");
 
