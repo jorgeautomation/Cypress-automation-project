@@ -3,5 +3,9 @@
   "env": {
     "username": "admin"
   },
-  "projectId": "n1cpdy"
+  "projectId": "n1cpdy",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions":{
+    "configFile": "reporterOptions.json"
+  }
 }
