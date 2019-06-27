@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "combine-reports":"npx mochawesome-merge --reportDir cypress/reports/mocha > mochareports/report.json",
+        "combine-reports": "npx mochawesome-merge --reportDir cypress/reports/mocha > mochareports/report.json",
         "generate-report": "npx marge mochareports/report.json -f report -o mochareports"
     },
     "devDependencies": {
@@ -9,9 +9,10 @@
         "cypress-cucumber-preprocessor": "^1.11.0",
         "cypress-dark": "^1.7.11",
         "cypress-file-upload": "^3.1.1",
+        "cypress-multi-reporters": "^1.1.22",
         "cypress-xpath": "^1.3.1",
         "mocha": "^6.1.4",
-        "cypress-multi-reporters": "^1.1.22",
+        "mocha-junit-reporter": "^1.23.0",
         "mochawesome": "^4.0.1",
         "mochawesome-merge": "^2.0.1",
         "mochawesome-report-generator": "^4.0.0"
