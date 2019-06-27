@@ -17,18 +17,18 @@ module.exports = (on, config) => {
   //cucumber
   on('file:preprocessor', cucumber())
 
-  //this one is for maximize windows
-  /*on('before:browser:launch', (browser = {}, args) => {
+  //this one is for handling browsers
+  on('before:browser:launch', (browser = {}, args) => {
     if(browser.name==='chrome'){
-      args.push('--start-fullscreen')
+      //args.push('--start-fullscreen')
       //args.push('--incognito')
       return args
     }
     if(browser.name==='electron'){
-      args['fullscreen'] = true
+      //args['fullscreen'] = true
       return args
     }
-  })*/
+  })
 
 }
   // `on` is used to hook into various events Cypress emits

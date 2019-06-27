@@ -1,4 +1,8 @@
 {
+    "scripts": {
+        "combine-reports":"npx mochawesome-merge --reportDir cypress/reports/mocha > mochareports/report.json",
+        "generate-report": "npx marge mochareports/report.json -f report -o mochareports"
+    },
     "devDependencies": {
         "@percy/cypress": "^1.0.8",
         "cypress": "^3.3.1",
