@@ -35,7 +35,8 @@ Running with Github Actions
 ---------------------------
 
 - Make sure you have the spec.js file you want to test within scripts in package.json
-- 
+- Make sure that in settings for your repo, under 'Gihub pages' you have chosen 'gh-pages branch'
+- Commit any change in the repositoy, the changes should be reflected in the github pages repository shown in the settings
 
 How it runs
 -----------

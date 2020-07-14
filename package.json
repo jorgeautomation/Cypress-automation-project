@@ -2,7 +2,7 @@
 	"scripts": {
 		"test-chrome": "cypress run --spec 'cypress/integration/examples/eademoapp.spec.js' --browser chrome",
 		"combine-reports": "mochawesome-merge mochawesome-report/*.json > mochareports/mochawesome.json",
-		"generate-report": "marge mochareports/mochawesome.json -o public --assetsDir public/assets -p index.html"
+		"generate-report": "marge mochareports/mochawesome.json -o public --assetsDir public/assets -f index.html -p 'This is your report'"
 	},
 	"devDependencies": {
 		"@percy/cypress": "^2.3.1",
