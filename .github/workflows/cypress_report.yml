@@ -11,7 +11,7 @@ jobs:
   cypress-test:
     name: Runs on Chrome 83
     runs-on: Ubuntu-18.04
-    container: cypress/browsers:node12.18.0-chrome83-ff77
+    container: cypress/browsers:node12.18.0-chrome83-ff77 
     steps:
       - uses: actions/checkout@v2
       
