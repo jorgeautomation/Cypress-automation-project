@@ -30,12 +30,14 @@ jobs:
         with:
           files: "cypress/screenshots" 
       
-      - name: Copy test execution videos and screenshots
+      - name: Copy test execution videos 
         run: |
           # mkdir public (uncomment if you haven't created the folder locally)
           cp -r cypress/videos public/videos
-          if: steps.check_screenshot_folder.outputs.files_exists == 'true'
-          cp -r cypress/screenshots public/screenshots
+          
+      - name: Copy screenshot folder if there is any failure
+        if: steps.check_screenshot_folder.outputs.files_exists == 'true'
+        run: cp -r cypress/screenshots public/screenshots   
           
       - name: Merge test reports
         run: npm run combine-reports
