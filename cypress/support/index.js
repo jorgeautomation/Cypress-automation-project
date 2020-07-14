@@ -13,14 +13,23 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 //require('cypress-dark') //not supported in Cypress 3.3.1
-require('cypress-xpath')
+require('cypress-xpath');
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-  //handle the exception
-  Cypress.on('uncaught:exception', (err, runnable) => {
-    return false
-  })
+//handle the exception
+Cypress.on('uncaught:exception', (err, runnable) => {
+	return false;
+});
+
+// Add this so we can have the video in the mockawesome report
+// Cypress.on('test:after:run', (test, runnable) => {
+// 	let videoName = Cypress.spec.name;
+// 	videoName = videoname.replace('/.js.*', '.js');
+// 	const videoURL = 'videos/' + videoName + '.mp4';
+
+// 	addContext({ test }, videoURL);
+// });
