@@ -28,7 +28,7 @@ jobs:
         id: check_screenshot_folder
         uses: andstor/file-existence-action@v1
         with:
-          files: "uses: andstor/file-existence-action@v1" 
+          files: "cypress/screenshots" 
       
       - name: Copy test execution videos and screenshots
         run: |
