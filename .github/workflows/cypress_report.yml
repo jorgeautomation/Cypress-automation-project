@@ -26,7 +26,7 @@ jobs:
       
       - name: Copy test execution videos and screenshots
         run: |
-          mkdir public
+          # mkdir public (uncomment if you haven't created the folder locally)
           cp -r cypress/videos public/videos
           cp -r cypress/screenshots public/screenshots
           
