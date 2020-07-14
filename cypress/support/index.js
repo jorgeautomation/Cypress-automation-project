@@ -16,6 +16,7 @@
 require('cypress-xpath');
 // Import commands.js using ES2015 syntax:
 import './commands';
+import addContext from 'mochawesome/addContext';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
@@ -26,10 +27,10 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 });
 
 // Add this so we can have the video in the mockawesome report
-// Cypress.on('test:after:run', (test, runnable) => {
-// 	let videoName = Cypress.spec.name;
-// 	videoName = videoname.replace('/.js.*', '.js');
-// 	const videoURL = 'videos/' + videoName + '.mp4';
+Cypress.on('test:after:run', (test, runnable) => {
+	let videoName = Cypress.spec.name;
+	videoName = videoName.replace('/.js.*', '.js');
+	const videoURL = 'videos/examples/' + videoName + '.mp4';
 
-// 	addContext({ test }, videoURL);
-// });
+	addContext({ test }, videoURL);
+});

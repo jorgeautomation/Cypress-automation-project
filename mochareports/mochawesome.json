@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "suites": 4,
+    "tests": 4,
+    "passes": 4,
     "pending": 0,
     "failures": 0,
-    "start": "2020-07-14T21:49:28.998Z",
-    "end": "2020-07-14T21:49:28.998Z",
-    "duration": 2082,
-    "testsRegistered": 1,
+    "start": "2020-07-14T22:08:26.197Z",
+    "end": "2020-07-14T22:08:26.197Z",
+    "duration": 8385,
+    "testsRegistered": 4,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -61,6 +61,180 @@
           "pending": [],
           "skipped": [],
           "duration": 2082,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "60e89ccf-2990-4e30-bd80-f99fd987dbff",
+      "title": "",
+      "fullFile": "cypress/integration/examples/eademoapp.spec.js",
+      "file": "cypress/integration/examples/eademoapp.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b8f53e72-6d6d-4dd1-ba70-685275df0568",
+          "title": "Test pop up window",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform login",
+              "fullTitle": "Test pop up window Perform login",
+              "timedOut": null,
+              "duration": 2248,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"[name='UserName']\").type(\"admin\");\ncy.get(\"[name='Password']\").type(\"password\");\ncy.get(':nth-child(3) > input').click(); //click the generate pop up button\ncy.get(\"[name='generate']\").click();\ncy.on('window.window:confirm', function (str) {\n  expect(str).to.eq('You generated a Javascript alet');\n  return true;\n});",
+              "err": {},
+              "uuid": "dc112b1b-df3a-4f1e-97c7-11721b447360",
+              "parentUUID": "b8f53e72-6d6d-4dd1-ba70-685275df0568",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dc112b1b-df3a-4f1e-97c7-11721b447360"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2248,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "4c44dd46-772f-417f-a989-90a33af4f1c3",
+      "title": "",
+      "fullFile": "cypress/integration/examples/eademoapp.spec.js",
+      "file": "cypress/integration/examples/eademoapp.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8d23faa9-c3e3-4c3f-b69b-16a0a442d269",
+          "title": "Test pop up window",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform login",
+              "fullTitle": "Test pop up window Perform login",
+              "timedOut": null,
+              "duration": 1946,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"[name='UserName']\").type(\"admin\");\ncy.get(\"[name='Password']\").type(\"password\");\ncy.get(':nth-child(3) > input').click(); //click the generate pop up button\ncy.get(\"[name='generate']\").click();\ncy.on('window.window:confirm', function (str) {\n  expect(str).to.eq('You generated a Javascript alet');\n  return true;\n});",
+              "err": {},
+              "uuid": "bc8c6798-4f1a-4892-9a01-3fcaac07c790",
+              "parentUUID": "8d23faa9-c3e3-4c3f-b69b-16a0a442d269",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bc8c6798-4f1a-4892-9a01-3fcaac07c790"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1946,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "4ea3e52e-8dba-4c22-ae23-80563ed09ce5",
+      "title": "",
+      "fullFile": "cypress/integration/examples/eademoapp.spec.js",
+      "file": "cypress/integration/examples/eademoapp.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "08a433cb-7f41-4d2c-8274-df1375d00e42",
+          "title": "Test pop up window",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform login",
+              "fullTitle": "Test pop up window Perform login",
+              "timedOut": null,
+              "duration": 2109,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/examples/examples/eademoapp.spec.js.mp4\"",
+              "code": "cy.get(\"[name='UserName']\").type(\"admin\");\ncy.get(\"[name='Password']\").type(\"password\");\ncy.get(':nth-child(3) > input').click(); //click the generate pop up button\ncy.get(\"[name='generate']\").click();\ncy.on('window.window:confirm', function (str) {\n  expect(str).to.eq('You generated a Javascript alet');\n  return true;\n});",
+              "err": {},
+              "uuid": "ce7b3eda-d601-4961-b0c8-806aa7873aa8",
+              "parentUUID": "08a433cb-7f41-4d2c-8274-df1375d00e42",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ce7b3eda-d601-4961-b0c8-806aa7873aa8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2109,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
