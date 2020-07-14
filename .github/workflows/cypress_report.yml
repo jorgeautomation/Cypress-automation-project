@@ -24,10 +24,17 @@ jobs:
         run: npm run test-chrome
         continue-on-error: true
       
+      - name: Check if screenshot folder exist
+        id: check_screenshot_folder
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "uses: andstor/file-existence-action@v1" 
+      
       - name: Copy test execution videos and screenshots
         run: |
           # mkdir public (uncomment if you haven't created the folder locally)
           cp -r cypress/videos public/videos
+          if: steps.check_screenshot_folder.outputs.files_exists == 'true'
           cp -r cypress/screenshots public/screenshots
           
       - name: Merge test reports
