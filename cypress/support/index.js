@@ -27,10 +27,19 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 });
 
 // Add this so we can have the video in the mockawesome report
+const titleToFileName = (title) => title.replace(/[:\/]/g, '');
 Cypress.on('test:after:run', (test, runnable) => {
-	let videoName = Cypress.spec.name;
-	videoName = videoName.replace('/.js.*', '.js');
-	const videoURL = 'videos/examples/' + videoName + '.mp4';
+	const filename = `${titleToFileName(runnable.parent.title)} -- ${titleToFileName(test.title)} (failed).png`;
+	addContext({ test }, `../cypress/videos/${Cypress.spec.name}.mp4`);
+	//if failed also add screenshots
+	if (test.state === 'failed') {
+		addContext({ test }, `../cypress/screenshots/${Cypress.spec.name}/${filename}`);
+	}
 
-	addContext({ test }, videoURL);
+	// let videoName = Cypress.spec.name;
+	// videoName = videoName.replace('/.js.*', '.js');
+	// const videoUrl = 'videos/' + videoName + '.mp4';
+	// console.log(`this is the path: ${videoUrl}`);
+
+	// addContext({ test }, videoUrl);
 });

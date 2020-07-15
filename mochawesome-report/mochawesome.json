@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2020-07-14T21:47:49.244Z",
-    "end": "2020-07-14T21:47:52.723Z",
-    "duration": 3479,
+    "start": "2020-07-15T00:27:00.288Z",
+    "end": "2020-07-15T00:27:03.604Z",
+    "duration": 3316,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ee434c97-68bd-4fbc-87c6-762d4ffbd232",
+      "uuid": "09241a1d-cf89-46d8-9ea2-7f5aab753be0",
       "title": "",
       "fullFile": "cypress/integration/examples/eademoapp.spec.js",
       "file": "cypress/integration/examples/eademoapp.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e76f5071-b34a-4716-a56c-8dff937ee80e",
+          "uuid": "cb441aef-7777-49f3-856a-df92a0ad1324",
           "title": "Test pop up window",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Perform login",
               "fullTitle": "Test pop up window Perform login",
               "timedOut": null,
-              "duration": 2082,
+              "duration": 1975,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": null,
+              "context": "\"../cypress/videos/examples/eademoapp.spec.js.mp4\"",
               "code": "cy.get(\"[name='UserName']\").type(\"admin\");\ncy.get(\"[name='Password']\").type(\"password\");\ncy.get(':nth-child(3) > input').click(); //click the generate pop up button\ncy.get(\"[name='generate']\").click();\ncy.on('window.window:confirm', function (str) {\n  expect(str).to.eq('You generated a Javascript alet');\n  return true;\n});",
               "err": {},
-              "uuid": "21bede19-8b09-44e8-b874-ca05cc111a9e",
-              "parentUUID": "e76f5071-b34a-4716-a56c-8dff937ee80e",
+              "uuid": "cc8d126c-c0d4-4cb6-88f2-813e4c60159c",
+              "parentUUID": "cb441aef-7777-49f3-856a-df92a0ad1324",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "21bede19-8b09-44e8-b874-ca05cc111a9e"
+            "cc8d126c-c0d4-4cb6-88f2-813e4c60159c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2082,
+          "duration": 1975,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,9 +95,8 @@
     "marge": {
       "options": {
         "id": "default",
-        "reportDir": "./mochawesome-report",
         "quiet": true,
-        "overwrite": false,
+        "overwrite": true,
         "html": false,
         "json": true
       },

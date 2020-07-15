@@ -1,11 +1,11 @@
 {
-  "baseUrl": "http://eaapp.somee.com",
-  "env": {
-    "username": "admin"
-  },
-  "projectId": "n1cpdy",
-  "reporter": "cypress-multi-reporters",
-  "reporterOptions":{
-    "configFile": "reporterOptions.json"
-  }
+	"baseUrl": "http://eaapp.somee.com",
+	"env": {
+		"username": "admin"
+	},
+	"projectId": "n1cpdy",
+	"reporter": "cypress-multi-reporters",
+	"reporterOptions": {
+		"configFile": "reporterOptions.json"
+	}
 }
