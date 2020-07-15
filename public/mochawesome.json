@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2020-07-15T00:27:12.099Z",
-    "end": "2020-07-15T00:27:12.099Z",
-    "duration": 1975,
+    "start": "2020-07-15T00:55:09.570Z",
+    "end": "2020-07-15T00:55:09.570Z",
+    "duration": 1945,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "09241a1d-cf89-46d8-9ea2-7f5aab753be0",
+      "uuid": "99f823f6-c39a-4542-977f-6563524a2e89",
       "title": "",
       "fullFile": "cypress/integration/examples/eademoapp.spec.js",
       "file": "cypress/integration/examples/eademoapp.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "cb441aef-7777-49f3-856a-df92a0ad1324",
+          "uuid": "70cf7cc8-a886-46d9-a82b-b2e17e0dc06f",
           "title": "Test pop up window",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Perform login",
               "fullTitle": "Test pop up window Perform login",
               "timedOut": null,
-              "duration": 1975,
+              "duration": 1945,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "\"../cypress/videos/examples/eademoapp.spec.js.mp4\"",
+              "context": "\"videos/examples/eademoapp.spec.js.mp4\"",
               "code": "cy.get(\"[name='UserName']\").type(\"admin\");\ncy.get(\"[name='Password']\").type(\"password\");\ncy.get(':nth-child(3) > input').click(); //click the generate pop up button\ncy.get(\"[name='generate']\").click();\ncy.on('window.window:confirm', function (str) {\n  expect(str).to.eq('You generated a Javascript alet');\n  return true;\n});",
               "err": {},
-              "uuid": "cc8d126c-c0d4-4cb6-88f2-813e4c60159c",
-              "parentUUID": "cb441aef-7777-49f3-856a-df92a0ad1324",
+              "uuid": "e4db11fd-fabb-4623-a7b8-f8a79aade292",
+              "parentUUID": "70cf7cc8-a886-46d9-a82b-b2e17e0dc06f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "cc8d126c-c0d4-4cb6-88f2-813e4c60159c"
+            "e4db11fd-fabb-4623-a7b8-f8a79aade292"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1975,
+          "duration": 1945,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
