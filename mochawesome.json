@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2020-07-15T00:29:38.855Z",
-    "end": "2020-07-15T00:29:38.855Z",
-    "duration": 1210,
+    "start": "2020-07-15T00:59:17.340Z",
+    "end": "2020-07-15T00:59:17.340Z",
+    "duration": 1214,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "17508a7e-6aa2-4a15-8ffa-4b901e85f7a2",
+      "uuid": "5f24bb45-b1a2-40b0-93b3-dfb499b7b01a",
       "title": "",
       "fullFile": "cypress/integration/examples/eademoapp.spec.js",
       "file": "cypress/integration/examples/eademoapp.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3ee4a6c8-d4f1-491f-acfc-acf383b2e13b",
+          "uuid": "f4b9e59d-89b5-400b-b81f-4c1c21c56591",
           "title": "Test pop up window",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Perform login",
               "fullTitle": "Test pop up window Perform login",
               "timedOut": null,
-              "duration": 1210,
+              "duration": 1214,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "\"../cypress/videos/examples/eademoapp.spec.js.mp4\"",
+              "context": "\"videos/examples/eademoapp.spec.js.mp4\"",
               "code": "cy.get(\"[name='UserName']\").type(\"admin\");\ncy.get(\"[name='Password']\").type(\"password\");\ncy.get(':nth-child(3) > input').click(); //click the generate pop up button\ncy.get(\"[name='generate']\").click();\ncy.on('window.window:confirm', function (str) {\n  expect(str).to.eq('You generated a Javascript alet');\n  return true;\n});",
               "err": {},
-              "uuid": "09ada8a0-a3a9-4ab0-991a-a0a41ad003e8",
-              "parentUUID": "3ee4a6c8-d4f1-491f-acfc-acf383b2e13b",
+              "uuid": "8847f4a1-dcf7-44eb-9616-a8c906ff0231",
+              "parentUUID": "f4b9e59d-89b5-400b-b81f-4c1c21c56591",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "09ada8a0-a3a9-4ab0-991a-a0a41ad003e8"
+            "8847f4a1-dcf7-44eb-9616-a8c906ff0231"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1210,
+          "duration": 1214,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
